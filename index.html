@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>기묘-한 가위</title>
+	<style>
+		header, section, body, h1, h2, p, footer, nav{margin: 0; padding: 0;}
+
+	
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+
+html{
+  font-family: 'Paperozi' ;
+  font-optical-sizing: auto;
+  font-weight: 400; 
+  font-style: normal;
+  word-break: keep-all;}
+		
+
+		nav{background: black;
+			border-bottom: dashed 3px white;
+			padding: 20px 80px;
+		
+		}
+
+
+		nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			color: white;
+		}
+
+		nav a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.footerflex {
+
+			list-style: none;
+			text-decoration: none;
+		}
+		footer ul{margin: 0;
+			padding: 0;}
+
+		footer a {
+
+		    text-decoration: none;
+		    color: inherit; /* 기존 색 유지 */
+		}
+
+		.flex {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.menu {
+			gap: 50px;
+		}
+
+		div.contents {
+			    max-width: 600px;
+			    width: 90%;
+			    margin: auto;
+			    padding: 50px 0;
+			}
+		div.contents2{
+				font-weight: 2rem;
+				font-size: 2rem;
+				margin: auto;
+				padding: 50px 100px;
+				line-height: 8;}
+
+		div.contents3{
+			max-width: 600px;
+				margin: auto;
+				padding: 100px 100px 30px;
+				line-height: 2}
+
+
+				
+
+
+		.full-text-container {
+		    margin: 0;
+		    padding: 0;
+		    color: white;
+		    height: 100vh;
+		    width: 100%;
+		    display: flex;
+		    align-items: center;
+		}
+
+		.white{color: white;}
+		.black{background: black;}
+		.blue{color: #89F9FF;
+			  text-shadow: 4px 4px 29px #89F9FF}
+		
+		.center{text-align: center;}
+
+		.left{text-align: left;}
+
+		.left2{width: 300px;
+  			text-align: center;}
+
+  		.leftp{text-align: left;
+  			position: absolute;
+  			top: 22%}
+
+		.right{text-align: right;}
+
+		.rightp{text-align: right; 
+				position: relative;
+				top: 250px;}
+
+		.shadow{text-shadow: 4px 4px 29px black;}
+
+		.scissors1{width: 600px;
+			position: absolute ;
+			top: 185px}
+
+		.scissors2 {
+		    position: absolute;
+		    top: 35%;
+		    left: 55%;
+		    width: 200px;
+		}
+
+
+
+
+
+		.pic2 {
+			position: relative;
+			background: url(png2.png) no-repeat;
+			background-size: cover;
+			display: flex;
+			font-size: 1rem;
+			font-weight: 1.5rem;}
+
+
+
+		
+
+		.pic3{background: url(png3.png);
+			background-size: cover;
+			background-attachment: fixed;
+			display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    text-align: center;
+		    
+			line-height: 2;}
+
+		.pic2, .pic3, .pic4 {
+		    min-height: 100vh;
+		    font-weight: 1rem;
+		    font-size: 2rem;
+		}
+		.fantasy{
+			text-align: center;
+			line-height: 5;
+			font-size: 3rem;
+			font-weight: 2rem;
+		}
+
+		.big{font-size: 4rem;}
+
+		.pic4{background: url(png4.png);
+			background-size: cover;
+			
+			line-height: 10;}
+			
+		.pic5 {
+			position: relative;
+			width: 100%;
+			min-height: 100vh;
+			overflow: hidden;
+		}
+
+
+		.bg {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+
+		
+		.diagonal1 {
+			position: absolute;
+			font-size: 1.5rem;
+			font-weight: 2rem;
+			position: absolute;
+			top: 17.5%;
+			left: 15%;
+			transform: rotate(-8deg);
+			color: black;
+		}
+
+		
+		.scissors2{
+		    position: absolute;
+		    top: 52%;
+		    left: 10%;
+		    width: 52%;
+		    transition: transform 0.3s ease; /* 부드럽게 */
+		}
+
+		.scissors2:hover{
+		    transform: scale(1.1); /* 10% 확대 */
+		}
+
+		.whitebg{
+			font-size: 2rem;
+			font-weight: 5rem;
+			background: white;
+			color: black;
+		 	position: relative;}
+
+
+		.ghost{
+			font-weight: 2rem;
+			font-size: 1.5rem;
+			color: white;
+			text-align: right;
+		    position: absolute;
+		    top: 68%;
+		    right: 5%;
+
+		}
+
+
+		.contents4{
+			font-weight: 2rem;
+			font-size: 1.5rem;
+			position: absolute;
+			top: 80%;
+		    left: 5%; }
+
+
+
+
+		.ghost2{
+		    position: absolute;
+		    top: -110%;
+		    left:-38%;
+		    width: 120%;
+		     z-index: 10;
+
+		}
+
+	
+
+		.diagonal2{
+			transform: rotate(-17.68deg);
+			display: inline-block;
+			padding: 300px 120px 300px 10px;
+			}
+
+
+		.pic9{background: url(png9.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    text-align: center;
+		    position: relative;
+			line-height: 2;
+			padding: 150px 0px;
+			font-size: 1.5rem;
+			font-weight: 2rem}
+
+		.small{
+			font-size: 0.8rem;
+			font-weight: 1rem;
+			color: #A1A1A1;
+			position: absolute;
+			top:105%;
+			left: 5%;
+			}
+
+		
+
+		.box{color: red;
+			margin: auto;
+			background: white;
+			padding: 30px 30px;
+			font-weight: 2rem;
+			font-size: 2rem;}
+
+		.strike {
+			text-decoration: line-through;
+			text-decoration-thickness: 2px;
+			}
+
+		
+		.delete {
+
+			font-weight: 200;
+			line-height: 1.2;
+			white-space: normal;   /* 줄바꿈 허용 */
+			word-break: break-all; /* 글자 단위로 꽉 채움 */
+			font-size: 40px;       /* 크기 키우기 */
+			text-align: center;
+		}
+		
+		.pic15{background:url(png15.png);
+			background-size: cover;
+			background-position: center;
+			padding: 600px 0px;
+			 }
+
+		.chat{width: 700px;
+				padding: 100px 0px;
+				font-size: 1.5rem;
+				font-weight:2rem; }
+
+		.pb{padding-bottom: 100px;}
+
+		.cut{padding: 300px 0px;
+			font-size: 2rem;
+			font-weight:5rem}
+
+		.about{padding: 100px 0px 0px;
+			font-size: 1.5rem;
+			font-weight: 2rem;}
+
+		.design{
+			padding: 100px 0px 0px;
+			font-size: 1.5rem;
+			font-weight: 2rem;}
+
+		.believe{padding: 200px 0px 0px;
+			font-size: 1.5rem;
+			font-weight: rem;}
+
+
+
+		.spiderman{
+			font-size: 2rem;
+			font-weight: 1rem;
+			position:relative;
+			padding: 300px;
+
+			}
+
+		.gif{position: absolute;
+			width: 70%;
+			top:40%;
+			left: 0%;
+			}
+
+		.spiderimg{
+
+			position: absolute;
+			width: 40%;
+			top: 0%;
+			right: 2%;}
+
+
+		.spiderman2{
+			position: absolute;
+			top:50%;
+			left: 0%;
+			width: 49%;
+		}
+
+		.oh{padding: 250px 0px;
+			font-size: 2rem;
+			font-weight: 2rem;}
+
+		.stock{position: relative;
+			padding: 200px 0px;}
+		
+		.stockimg{
+		    position: relative;
+		    width: 80%;
+		    top: 5%;
+		    left: 50%;
+		    transform: translateX(-50%);
+		    z-index: 1;
+		    min-height: 800px;  /* 이미지 높이에 맞게 */
+		}
+
+		.billionaire{
+			font-weight: 3rem;
+			font-size: 1.5rem;
+		    position: absolute;
+		    top: 40%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    
+		    color: white;
+		    text-align: center;
+		    z-index: 2;  /* 이미지 위로 */
+		}
+		
+		.billionaire2{
+		    position: absolute;
+		    top: 49%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    
+		    color: white;
+		    text-align: center;
+		    z-index: 2;  /* 이미지 위로 */
+		}
+
+		.billionaire3{
+			font-weight: 3rem;
+			font-size: 1.5rem;
+		    position: absolute;
+		    top: 78%;
+		    left: 43%;
+		    transform: translate(-50%, -50%);
+		    
+		    color: white;
+		    text-align: center;
+		    z-index: 2;  /* 이미지 위로 */
+		}
+		.billionaire4{
+			font-weight: 3rem;
+			font-size: 1.5rem;
+		    position: absolute;
+		    top: 74.5%;
+		    right: 37%;
+		    transform: translate(-50%, -50%);
+		    
+		    color: white;
+		    text-align: center;
+		    z-index: 2;  /* 이미지 위로 */
+		    rotate: 180deg;
+		}
+
+		.you{padding: 100px 0px 200px;
+			font-size: 1.5rem;
+			font-weight: 2rem;}
+
+		
+		.review-random{
+
+    position: relative;
+    height: 900px;
+ 
+    overflow: hidden;
+    padding-bottom:300px; 
+}
+
+/* 공통 */
+.review-random p,
+.review-random h1,
+.review-random h2 {
+    position: absolute;
+    margin: 0;
+}
+
+/* 흐린 텍스트 */
+.review-random .faded {
+    color: rgba(0,0,0,0.25);
+}
+
+/* 메인 강조 */
+.review-random .main {
+    font-size: 60px;
+    font-weight: bold;
+    z-index: 3;
+}
+
+/* 중간 */
+.review-random .mid {
+    font-size: 28px;
+    z-index: 2;
+}
+
+/* 작은 */
+.review-random .small {
+    font-size: 20px;
+    z-index: 1;
+}
+
+	.review2{font-size: 1.5rem;
+		font-weight: 1rem;}
+
+		.copy{font-size: 1rem;
+			font-weight: 1rem;}
+
+			.review-random .contents{
+    position: relative;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    height: 100%;
+}
+
+
+
+
+
+		footer{
+			background-color: black;
+			color: grey;
+			border-top: dashed 3px grey;
+			padding: 20px 80px;
+			line-height: 1.5rem;
+			padding-top:50px;
+			padding-bottom:100px; }
+		.grey .right{line-height: 1.5rem;}
+
+
+		.msg{
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 1s ease;
+}
+
+.msg.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="flex">
+			<div class="logo">
+				<a href="#"> 환상연구소</a>
+			</div>
+			<ul class="menu flex">
+				<li><a href="#a">About</a></li>
+				<li><a href="#h">How to</a></li>
+				<li><a href="#d">Design</a></li>
+				<li><a href="#r">Review</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<header>
+		<section class="black">
+			<div class="contents chat">
+    
+			    <div class="center white msg">
+			        <img class="chat" src="c1.png">
+			        <p>질척거리는 X의 연락?</p>
+			    </div>
+
+			    <div class="center white msg">
+			    	<img class="chat" src="c2.png">
+			        <p>연애상담하면서 남친욕하면 난리치는 남미새 친구?</p>
+			    </div>
+
+			    <div class="center white msg">
+			        <img class="chat" src="c3.png">
+			        <p class="pb">밑도 끝도 없는 단체채팅방 고백공격?</p>
+			    </div>
+
+			</div>
+		</section>
+	</header>
+	
+
+	<section class="cut">
+		<div class="contents ">
+			<h1 class="center">CUT!</h1>
+		</div>
+	</section>
+	<section class="cut">
+		<div>
+			<h2 class="center">잘라버리세요,</h2>
+		</div>
+	</section>
+
+	<section class="pic2 black">
+		<div class="contents number1">
+			<div class="leftp white">
+				<h1>기묘-한 가위.</h1>
+			</div>
+			<img class="scissors1" src="png1.png">
+
+			<div class="rightp">
+				<p>이토록 완벽한.</p>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="black about" id="a">
+		<div class="contents3 white">
+			<h2>About us</h2>
+			<p>환상 연구소는 시간, 공간, 개념을 초월한 제품들을 선보여요.</p>
+		</div>
+	</section>
+
+	<section class="pic3"> 
+
+		<!-- 글자 키우기 -->
+		<div class="contents shadow white">
+			<h3>우리는 늘 노력합니다.</h3>
+			<h1 class="blue">
+				<span class="fantasy">환상.</span>
+			</h1>
+			<h3>고객맞춤.</h3>
+			<h2>놀랍도록 효과적인.</h2>
+		</div>
+	</section>
+
+	<section class="black believe">
+		<div class="contents">
+			<p class="white center">믿을 수 있는 재료를 사용해요.</p>
+		</div>
+	</section>
+
+
+	<section class="pic4 black">
+		<div class="contents white">
+			<h2 class="left blue">양자역학적 원리.</h2>
+			<h2 class="right blue">세포∎∎∎</h2>
+			<h2 class="center blue">믿음.</h2>
+			<h2 class="right blue">구원.</h2>
+			<h2 class="left blue">∎∎∎∎∎∎∎∎∎.</h2>
+		</div>
+		<div class="full-text-container delete">
+			<p class="strike">검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제검열삭제</p>
+		</div>
+	</section>
+
+	<section>
+		<div class="contents2">
+			<h1 class="center big">서걱</h1>
+			<p class="center">그리하여, 무엇이든지 자를 수 있어요.</p>
+		</div>
+	</section>
+
+	<section class="pic5">
+
+		
+		<img src="png5.png" class="bg">
+
+		
+		<div class="diagonal1" id="h">
+			<h2>How to?</h2>
+			<h3>어떻게 사용할까요?</h3>
+		</div>
+		<div>
+
+		<img class="scissors2" src="png6.png">
+
+		</div>
+		<div class="ghost">
+			<p>혼자 있을때, 귀신이 나오진 않을까<br>걱정하진 않았나요?</p>
+		</div>
+		<div class="contents4">
+			<p class="left2">기묘-한 가위로,
+				<br>귀신의 앞머리를 잘라주세요.</p>
+		</div>
+
+</section>
+
+	
+
+	
+
+	<section class="whitebg">
+		<div class="contents">
+			<img class="ghost2" src="png7.png">
+		</div>
+		<div>
+			<p class="right">귀신은 당신에게 고마워하며, 둘도 없는 친구가 되어줄 것입니다.</p>
+		</div>
+	</section>
+
+	<section class="black spiderman">
+
+    <div class="spider-wrap">
+
+        <div class="spider-text">
+            <p class="diagonal2 white">
+                세상을 구한 영웅의 얼굴이 궁금한가요?
+            </p>
+        </div>
+
+        <img class="gif" src="gif1.gif">
+        <img class="spiderimg" src="png8.png">
+
+    </div>
+
+</section>
+
+	<section class="oh">
+		<div class="contents ">
+			<h2 class="center">오, 이런.</h2>
+		</div>
+	</section>
+
+	<section class="pic9"> 
+		<div class="contents shadow white">
+			<h2>전 세계가 스파이더맨의 정체를 알게되었어요.</h2>
+		</div>
+		<div><img class="spiderman2" src="png10.png"></div>
+		<div><p class="small">*사용자의 잘못된 사용으로 초래된 모든 현상에 대해 귀사는 책임을 지지 않습니다.*</p></div>
+	</section>
+
+	<section class="cut">
+		<div class="contents">
+			<h1 class="center">싹둑 싹둑<br>존재를 자르세요!</h1>
+		</div>
+	</section>
+
+	<section class="stock black"> 
+	    
+
+	    <div><img class="stockimg" src="st1.png"></div>
+
+	   
+	    <div class="billionaire">
+	        <h2 class="center">귀신보다 끝도 없이 떨어지는 주식 그래프가 더 무서우시다고요?</h2>
+	    </div>
+
+	    <div class="billionaire3">
+	        <h3>자르세요!</h>
+	    </div>
+	    <div class="billionaire4">
+	        <h3>그리고 돌리세요!</h>
+	    </div>
+		
+
+	</section>
+
+<section class="black you">
+	<div class="contents">
+			<h1 class="center white">당신은 이제, 억만장자!</h1>
+		</div>
+</section>
+	
+
+	<section class="black" id="d">
+		<div class="contents white design">
+			<h3 class="">Design</h3>
+			<p>사용자의 기호에 따른 다양한 디자인!</p>
+		</div>
+	</section>
+
+	<section class="black pic15"> 
+		
+		<div class="contents">
+			<h2 class=" center box">단돈<br>구천구백구십구만구천구백구십구원</h2>
+		</div>
+	</section>
+
+	<section id="r">
+		<div class="contents center review2">
+			<h3>Review</h3>
+			<p>우리를 사랑해주시는 고객님들의 생생한 증언!</p>
+		</div>
+	</section>
+
+	<section class="review-random ">
+<div class="contents">
+    <p class="faded small" style="top:15%; left:8%;">
+       "다시 읽고 싶은 소설이 있어서 기억을 잘라내고 다시 읽었어요! 역시 안 본 뇌 짱!"
+    </p>
+
+    <p class="faded small" style="top:30%; right:10%;">
+        "우리들의 친절한 이웃 스파이더맨이 피터파커라는걸 정말 아무도 모르더라구요!"
+    </p>
+
+    <p class="faded small" style="top:55%; right:15%;">
+        "귀신언니가 무섭게 하실래 앞머리 잘라줬더니 찐친돼서 잘 때 옆에서 지켜봐줘요. 떠나질 않는다니까요?하하."
+    </p>
+
+    <h2 class="main" style="top:25%; left:25%;">
+       "어떤 가위보다 잘 잘려요!"
+    </h2>
+
+    <h1 class="main" style="bottom:20%; left:20%;">
+      "흑역사도 잘 잘라줘요!"
+    </h1>
+
+    <h2 class="mid faded" style="bottom:10%; left:10%;">
+       "주식 망했는데 가위 덕분에 살았어요! 안심하고 집에 들어갈 수 있겠어요."
+    </h2>
+
+    <p class="faded small" style="bottom:5%; right:5%;">
+        "제발 존재를 돌려줘, 내 존재를 돌려줘. 돌려줘돌려줘돌려줘."
+    </p>
+</div>
+</section>
+
+	
+
+
+	<footer class="grey">
+		<div>
+			<p class="left">환상 연구소</p>
+			<div class=" copy">
+			<p class="right ">Copyright © 2026 환상연구소 항상 모든 권리 보유.</p>
+			<p class="right">∎∎특별시 ∎∎구 ∎∎∎∎∎길 ∎∎∎로</p>
+			<p class="right">연락처 ∎∎∎-∎∎∎∎-∎∎∎∎∎</p>
+			</div>
+			</div>
+			<ul class="footerflex">
+				<li><a href="#a">About</a></li>
+				<li><a href="#h">How to</a></li>
+				<li><a href="#d">Design</a></li>
+				<li><a href="#r">Review</a></li>
+			</ul>
+		</div>
+		</div>
+	</footer>
+
+<script>
+const msgs = document.querySelectorAll('.msg');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add('show');
+            }, i * 400);
+        }
+    });
+}, { threshold: 0.3 });
+
+msgs.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
